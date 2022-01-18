@@ -16,7 +16,7 @@ def my_match(word, have):
     return
 
 
-def main(me, have, nots, guesses):
+def main(have, nots, guesses):
 
     wordlist = '/usr/share/dict/words'
     with open(wordlist) as f:
@@ -41,16 +41,21 @@ def main(me, have, nots, guesses):
     for i, (word, score) in enumerate(sorted(scored.items(), key=lambda k:k[1], reverse=True)):
         if i > guesses:
             break
-        print(f'{word}: score: {score}')
+        print(f'{score}: {word}')
 
     return
 
 if __name__ == "__main__":
-    me = os.path.basename(sys.argv[0])
     p = argparse.ArgumentParser(description='Wordle guesser. Start with ".....".')
-    p.add_argument('--guesses', nargs=1, default=15, help='How many guesses to return.')
+    p.add_argument('--guesses', default=15, type=int, help='How many guesses to return.')
     p.add_argument('--nots', nargs=1, help='Characters that are NOT in the word.')
     p.add_argument('have', nargs=1, help='The word. UC for right place, lc for wrong place, else "."')
     args = p.parse_args()
-    main(me, args.have[0], set(args.nots[0]), args.guesses)
+
+    if args.nots is None:
+        nots = set()
+    else:
+        nots = set(args.nots[0])
+
+    main(args.have[0], nots, args.guesses)
 
