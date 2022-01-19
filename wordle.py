@@ -18,12 +18,17 @@ def my_match(word, have):
 
 def main(have, nots, guesses):
 
+    # Get all five letter words and turn them all to lower-case.
     wordlist = '/usr/share/dict/words'
     with open(wordlist) as f:
         words = [word.rstrip().lower() for word in f if len(word) == 6]
-
-    # No repeated letters allowed.
-    words = [word for word in words if len(word) == len(''.join(set(word)))]
+    
+    ##
+    #
+    # Apparently this is not true.
+    #
+    ## No repeated letters allowed.
+    #words = [word for word in words if len(word) == len(''.join(set(word)))]
 
     # Take out words with forbidden letters:
     words = [word for word in words if not nots.intersection(set(word))]
