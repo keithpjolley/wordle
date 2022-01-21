@@ -37,7 +37,7 @@ You'd find out the next guesses with:
 
 ## Example:
 
-*First guess:*
+*First guess:*  
 ![starting wordle grid](images/wordle1.jpg "Starting Wordle Grid")
 
 
@@ -66,7 +66,7 @@ need to skip the highest rated words. `arose` is my go-to start word.
 
 ---
 
-*Second Guess:*
+*Second Guess:*  
 ![First guess wordle grid](images/wordle2.jpg "First guess Wordle Grid")
 
 
@@ -85,7 +85,7 @@ Go with `fruit` instead.
 
 ---
 
-*Third Guess:*
+*Third Guess:*  
 ![Second guess wordle grid](images/wordle3.jpg "Second guess Wordle Grid")
 
 ```
@@ -102,6 +102,6 @@ Not sure I've heard of `prink` so go with `prick`.
 
 ---
 
-Got it!
+*Got it!*  
 
 ![Solved wordle grid](images/wordle4.jpg "Solved Wordle Grid")
