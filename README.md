@@ -9,28 +9,27 @@ python wordle solver
 *First guess:*
 
 ```
-% ./wordle.py .....                                                                                          22-01-18 - 7:56:54
-12623: aries
-12623: arise
-12623: raise
-12623: serai
-12567: erian
-12567: irena
-12567: reina
-12550: ariel
-12526: arite
-12526: artie
-12526: irate
-12526: retia
-12526: tarie
-12431: arose
-12431: oreas
-12358: leora
+⇒  ./wordle.py .....
+20458: arose
+20458: oreas
+20455: aries
+20455: arise
+20455: raise
+20455: serai
+20369: leora
+20366: ariel
+20353: erian
+20353: irena
+20353: reina
+20306: orate
+20303: arite
+20303: artie
+20303: irate
+20303: retia
 ```
 
-Note that not all words in the input dict `/usr/share/dict/words` are in the wordle dict so you may
-need to skip the highest rated words. Also, if there are a bunch of obscure words at the top of the
-list then a very common word, you may want to go with the more common word.
+Note that not all words in the input dict `/usr/share/dict/words` are in the wordle dictionary so you may
+need to skip the highest rated words. `arose` is my go-to start word.
 
 
 ![First guess wordle grid](images/wordle2.jpg "First guess Wordle Grid")
@@ -45,7 +44,6 @@ list then a very common word, you may want to go with the more common word.
 229: bruin
 226: print
 225: urbic
-
 ```
 
 Don't know what `bruit` is. Would think it's not in most puzzle word lists.
