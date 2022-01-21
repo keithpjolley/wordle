@@ -102,6 +102,7 @@ Not sure I've heard of `prink` so go with `prick`.
 
 ---
 
-*Got it!*  
-
 ![Solved wordle grid](images/wordle4.jpg "Solved Wordle Grid")
+
+
+*Got it!*
