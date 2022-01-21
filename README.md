@@ -4,6 +4,8 @@ python wordle solver
 
 ## Usage:
 
+![starting wordle grid](images/wordle1.jpg "Starting Wordle Grid")
+
 *First guess:*
 
 ```
@@ -30,48 +32,40 @@ Note that not all words in the input dict `/usr/share/dict/words` are in the wor
 need to skip the highest rated words. Also, if there are a bunch of obscure words at the top of the
 list then a very common word, you may want to go with the more common word.
 
-![wordle grid](images/wordle.jpg "Wordle Grid")
 
+![First guess wordle grid](images/wordle2.jpg "First guess Wordle Grid")
 
 *Second Guess:*
 
 ```
-% ./wordle.py .RO.. --nots ase --guess 5                                                                     22-01-18 - 8:01:48
-140: crown
-140: tronc
-135: bronc
-135: grown
-135: wrong
-134: crony
+⇒  ./wordle.py .R... --guess 5 --nots aose
+239: bruit
+239: fruit
+230: irgun
+229: bruin
+226: print
+225: urbic
+
 ```
 
-Ugh. 
+Don't know what `bruit` is. Would think it's not in most puzzle word lists.
+Go with `fruit` instead.
+
+![Second guess wordle grid](images/wordle3.jpg "Second guess Wordle Grid")
 
 *Third Guess:*
 
 ```
-% ./wordle.py .RO.. --nots asecwn --guess 5                                                                  22-01-18 - 8:01:51
-43: dropt
-43: grout
-41: drogh
-41: droit
-41: group
-39: broth
+⇒  ./wordle.py .R.i. --guess 5 --nots aosefut
+84: prink
+82: prick
+80: crink
+79: crimp
+79: gripy
+78: brink
 ```
 
-Sigh.
+Not sure I've heard of `prink` so go with `prick`.
+Got it!
 
-
-*Fourth Guess:*
-
-```
-% ./wordle.py .RO.. --nots asecwngut --guess 5                                                               22-01-18 - 8:02:56
-10: drovy
-10: proxy
-9: broil
-```
-
-I went with `broil` -- should have gone with `proxy` -- assuming `drovy` is not in the _wordle_ dictionary.
-
-This was a bad example because there were no "near misses" - that is, guesses that are in the word but in 
-the wrong place. Will make a better example tomorrow.
+![Solved wordle grid](images/wordle4.jpg "Solved Wordle Grid")
